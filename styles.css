@@ -1,0 +1,105 @@
+.home {
+    background-color: rgb(8, 22, 34);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.graphicdesigner {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+
+.center-text {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
+    margin: 50px;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+
+#aboutButton {
+background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+} 
+
+#aboutButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    transition: color 0.5s, background-color 0.5s; 
+}
+
+.about {
+    background-color: rgb(110, 172, 160);
+    background-image: url('background.png');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 40px;
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(29, 46, 43);
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    font-style: italic;
+    color: rgb(34, 64, 59);
+}
+
+.container2 {
+    text-align: center;
+    margin: none;
+}
+.text {
+    padding: 15%;
+    background-color: rgba(49, 92, 84, 0.5);
+}
+
+#backButton {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    } 
+    
+#backButton:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgb(255, 255, 255);
+        transition: color 0.5s, background-color 0.5s; 
+    }
+
+    p {
+        font-size: 20px;
+        color: white;
+    }
