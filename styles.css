@@ -1,6 +1,43 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Lobster';
+    src: url("./Lobster/Lobster-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url("./Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+/* Add this animation definition */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the elements you want to animate */
+.container,
+.center-text,
+.center-text span,
+.Ralph {
+    animation: fadeIn 2s ease-in-out; /* Adjust the animation duration and timing function as needed */
+    animation-fill-mode: both;
+    opacity: 0; /* Initially hide the elements */
+}
+
+
 .home {
     background-color: rgb(8, 22, 34);
-    margin: 0;
+    background-repeat: repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,28 +45,63 @@
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
     text-align: center;
 }
 
 .graphicdesigner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
+    transition: color 0.3s, -webkit-text-stroke-color 0.3s;
+}
+
+.graphicdesigner:hover {
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-color: transparent;
+}
+
+.Ralph {
+    font-family: 'Playfair';
 }
 
 
 .center-text {
+    font-family: 'Lobster';
+    letter-spacing: 4px;
     font-size: 60px;
+    font-weight: 10px;
     color: white;
     margin-bottom: 20px;
     margin: 50px;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.center-text span {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    transition: color 0.3s, -webkit-text-stroke-color 0.3s, transform 0.3s;
+}
+
+.center-text span:hover {
+    color: rgb(239, 176, 185);
+    -webkit-text-stroke-color: transparent;
+    transform: scale(1.2);
 }
 
 
 #aboutButton {
-background-color: transparent;
+  background-color: transparent;
+  font-size: 17px;
   color: white;
   padding: 10px 20px;
   cursor: pointer;
@@ -39,6 +111,7 @@ background-color: transparent;
 #aboutButton:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid white;
+    border-radius: 50px;
     transition: color 0.5s, background-color 0.5s; 
 }
 
@@ -51,7 +124,6 @@ background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
     font-size: 40px;
 }
 
@@ -60,8 +132,10 @@ h1 {
     color: rgb(29, 46, 43);
 }
 
-h2 {
+.name {
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
 h3 {
@@ -70,15 +144,21 @@ h3 {
 }
 
 .container2 {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: none;
 }
 .text {
-    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
     background-color: rgba(49, 92, 84, 0.5);
 }
 
-#backButton {
+#workButton {
     background-color: transparent;
     color: rgb(255, 255, 255);
     padding: 10px 20px;
@@ -90,16 +170,195 @@ h3 {
     justify-content: center;
     align-items: center;
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 0%;
     } 
     
-#backButton:hover {
+#workButton:hover {
         background-color: rgba(255, 255, 255, 0.2);
         border: 2px solid rgb(255, 255, 255);
         transition: color 0.5s, background-color 0.5s; 
     }
 
     p {
+        display: flex;
         font-size: 20px;
         color: white;
+        justify-content: end;
+        align-items: flex-end;
     }
+
+    :root {
+        --bar-width: 60px;
+        --bar-height: 8px;
+        --hamburger-gap: 6px;
+        --foreground: rgb(255, 255, 255);
+        --background: rgb(34, 64, 59);
+        --hamburger-margin: 8px;
+        --animation-timing: 200ms ease-in-out;
+        --hamburger-height: calc((var(--bar-height) * 3 
+        + var(--hamburger-gap) * 2));
+    }
+
+    .hamburger-menu {
+        --x-width: calc(var(--hamburger-height) * 1.41421356237);
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+        width: max-content;
+        position: absolute;
+        top: var(--hamburger-margin);
+        left: var(--hamburger-margin);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .hamburger-menu:has(input:checked) {
+        --foreground: rgb(34, 64, 59);
+        --background: rgb(176, 210, 239);
+    }
+
+    .hamburger-menu:has(input:focus-visible)::before,
+    .hamburger-menu:has(input:focus-visible)::after,
+    .hamburger-menu input:focus-visible {
+        border: 1px solid var(--background);
+        box-shadow: 0 0 0 1px;
+
+    }
+
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input {
+        content: "";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--foreground);
+        border-radius: 9999px;
+        transform-origin: left center;
+        transition: opacity var(--animation-timing), 
+        width var(--animation-timing), 
+        rotate var(--animation-timing), 
+        translate var(--animation-timing),
+        background-color var(--animation-timing);
+    }
+
+    .hamburger-menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+    } 
+
+    .hamburger-menu:has(input:checked)::before {
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+    }
+
+    .hamburger-menu:has(input:checked)::after {
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / 2);
+    }
+
+    .hamburger-menu input:checked {
+        opacity: 0;
+        width: 0;
+
+    }
+
+    .sidebar {
+        transition: translate var(--animation-timing);
+        translate: -100%;
+        padding: 0.5rem 1rem;
+        padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+        background-color: var(--foreground);
+        color: var(--background);
+        max-width: 10rem;
+        min-height: 100vh;
+    }
+
+    .hamburger-menu:has(input:checked) + .sidebar {
+        translate: 0;
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        font-size: 30px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+.work {
+    background-color: rgb(238, 171, 171);
+    background-repeat: repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+/* Style the header */
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Style the main content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Style the flex container */
+.flex-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Style the flex items */
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border: 2px solid #333;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* Style the flex item number */
+/*.flex-item span {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}*/
+
+/* Style the flex item image */
+.flex-item img {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Hover effect */
+.flex-item:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Show image on hover */
+.flex-item:hover img {
+    opacity: 1;
+}

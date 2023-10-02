@@ -1,7 +1,7 @@
 function goToAboutPage() {
-    window.location.href = "about.html";
+    window.location.href = "about2.html";
 }
 
-function goBack() {
-    window.location.href = "index.html";
+function goWork() {
+    window.location.href = "work.html";
 }
