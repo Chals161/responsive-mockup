@@ -11,7 +11,7 @@
     src: url("./Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
 }
 
-/* Add this animation definition */
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -23,14 +23,14 @@
     }
 }
 
-/* Apply the animation to the elements you want to animate */
+
 .container,
 .center-text,
 .center-text span,
 .Ralph {
-    animation: fadeIn 2s ease-in-out; /* Adjust the animation duration and timing function as needed */
+    animation: fadeIn 2s ease-in-out; 
     animation-fill-mode: both;
-    opacity: 0; /* Initially hide the elements */
+    opacity: 0; 
 }
 
 
@@ -300,7 +300,6 @@ h3 {
 
 }
 
-/* Style the header */
 header {
     text-align: center;
     background-color: #333;
@@ -308,7 +307,6 @@ header {
     padding: 20px 0;
 }
 
-/* Style the main content */
 main {
     display: flex;
     justify-content: center;
@@ -317,13 +315,11 @@ main {
     background-color: #f0f0f0;
 }
 
-/* Style the flex container */
 .flex-container {
     display: flex;
     gap: 20px;
 }
 
-/* Style the flex items */
 .flex-item {
     display: flex;
     flex-direction: column;
@@ -336,15 +332,6 @@ main {
     transition: transform 0.5s, box-shadow 0.5s;
 }
 
-/* Style the flex item number */
-/*.flex-item span {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}*/
-
-/* Style the flex item image */
 .flex-item img {
     max-width: 100%;
     max-height: 100%;
@@ -352,13 +339,11 @@ main {
     transition: opacity 0.5s;
 }
 
-/* Hover effect */
 .flex-item:hover {
     transform: scale(1.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Show image on hover */
 .flex-item:hover img {
     opacity: 1;
 }

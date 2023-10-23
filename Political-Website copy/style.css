@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Lora';
+    src: url("./Lora/Lora-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: 'Young_Serif';
+    src: url("./Young_Serif/YoungSerif-Regular.ttf");
+}
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: 'Lora';
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition effect */
+}
+
+/* Define hover styles for each link */
+nav ul li a:hover {
+    color: red; /* Home */
+}
+
+nav ul li:nth-child(2) a:hover {
+    color: orange; /* A Long Struggle */
+}
+
+nav ul li:nth-child(3) a:hover {
+    color: yellow; /* Providing Treatment */
+}
+
+nav ul li:nth-child(4) a:hover {
+    color: green; /* Changing Attitudes */
+}
+
+nav ul li:nth-child(5) a:hover {
+    color: blue; /* Common Questions */
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Young_Serif';
+    text-align: center;
+    -webkit-text-stroke: 0.5px black;
+    font-size: 60px;
+}
+
+h2 {
+    margin-top: 15px;
+}
+
+p{
+    margin-top: 15px;
+
+}
+
+footer {
+    text-align: center;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+    padding: 15px;
+  }
+
+img {
+    margin-top: 15px;
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+iframe {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Add more styles for your content as needed */

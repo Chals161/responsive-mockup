@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'YoungSerif';
+    src: url("./Young_Serif/YoungSerif-Regular.ttf");
+}
+@font-face {
+    font-family: 'Cormorant';
+    src: url("./Cormorant_Garamond/CormorantGaramond-Regular.ttf");
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url("./Quicksand/Quicksand-VariableFont_wght.ttf");
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: left side and the rest */
+    align-items: start; /* Align items to the top */
+    max-height: 170vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    background-image: url(backgound.png);
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.left-side {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 3em;
+    font-family: 'YoungSerif';
+    white-space: nowrap;
+    
+}
+
+.vertical-text2 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 1em;
+    white-space: nowrap;
+    transform: translate(100px, -950px); 
+}
+.vertical-text3 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: 'Cormorant';
+    font-size: 1em;
+    white-space: nowrap;
+    transform: translate(150px, -1800px); 
+}
+
+.vertical-text4 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: 'Cormorant';
+    font-size: 1em;
+    white-space: nowrap;
+    transform: translate(250px, -2350px); 
+}
+
+.vertical-text5 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 1em;
+    white-space: nowrap;
+    transform: translate(450px, -3450px); 
+}
+
+.center {
+    text-align: center;
+    font-family: 'Quicksand';
+    font-size: 1.7em;
+    margin-top: 100px;
+}
+
+.top-bottom {
+    text-align: right;
+    margin-top: 20%;
+    margin-right: 3%;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    
+}
+
+.small-font {
+    font-size: 1em;
+}
+
+.bottom, .bottom1 {
+    margin-right: 25%;
+}
+
+.bottom1 {
+    margin-top: 150px;
+}
+
+@media screen and (max-width: 768px) {
+    .vertical-text {
+        font-size: 2.5em; /* Reduce font size by 10% */
+    }
+
+    .vertical-text2, .vertical-text3, .vertical-text4, .vertical-text5 {
+        font-size: 0.7em;
+        margin-top: 300px; /* Reduce font size by 10% */
+    }
+
+    .center {
+        font-size: 1.3em; /* Reduce font size by 10% */
+    }
+
+    .top-bottom {
+        font-size: 0.7em; /* Reduce font size by 10% */
+    }
+
+    .container {
+        max-height: 145vh;
+    }
+}

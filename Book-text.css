@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Playfair';
+    src: url("./Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden; /* Add overflow: hidden to prevent body from scrolling */
+}
+
+#image-container {
+    flex: 1;
+    background-color: #000000;
+    overflow-y: scroll;
+}
+
+#text-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: scroll; /* Add overflow-y: scroll to the text container */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+h1 {
+    font-family: 'Playfair';
+    font-size: 28px;
+    color: #73377a;
+}
+
+p {
+    font-size: 16px;
+    color: #000000;
+}
+
+.static-image {
+    transform: none !important;
+}
+
+/* Define a media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px; /* Reduce the font size for h1 on smaller screens */
+    }
+
+    p {
+        font-size: 14px; /* Reduce the font size for p on smaller screens */
+    }
+
+    /* You can add additional styles for smaller screens here */
+}
+
+/* Define a media query for screens with a maximum width of 480px */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 15px; /* Further reduce the font size for h1 on very small screens */
+    }
+
+    p {
+        font-size: 8px; /* Further reduce the font size for p on very small screens */
+    }
+
+    /* You can add additional styles for even smaller screens here */
+}
+

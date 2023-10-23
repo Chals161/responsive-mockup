@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.resume {
+    border: 3px solid rgb(42, 99, 150);
+    max-width: 100%;
+    height: auto;
+}
+
+.download-button {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    transition: margin-top 0.3s ease, margin-bottom 0.3s ease; /* Added transition properties */
+}
+
+.download-button a {
+    text-decoration: none;
+    border-radius: 50px;
+    background-color: rgba(112, 174, 230, 0.581);
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease; /* Added transition property */
+}
+
+.download-button a:hover {
+    border-radius: 50px;
+    background-color: rgba(23, 104, 176, 0.581);
+}
+

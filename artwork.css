@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Playfair';
+    src: url("./Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#image-container {
+    flex: 1;
+    background-color: #000000;
+    overflow-y: scroll;
+}
+
+#text-container {
+    flex: 1;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+h1 {
+    font-family: 'Playfair';
+    font-size: 28px;
+    color: #73377a;
+}
+
+p {
+    font-size: 16px;
+    color: #ffffff;
+}
